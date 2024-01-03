@@ -17,6 +17,8 @@ jobs:
         path: large_digests_file.text
       
   provenance:
+    needs:
+      - build
     permissions:
       actions: read # Needed for detection of GitHub Actions environment.
       id-token: write # Needed for provenance signing and ID
