@@ -13,7 +13,7 @@ jobs:
   
     - run: |
         sha256sum artifact.txt | base64 -w0 > digest.txt
-        echo "digest=$(cat digest.txt)\n" >> $GITHUB_OUTPUT
+        echo "digest=$(cat digest.txt)" >> $GITHUB_OUTPUT
       id: hashes
       
   provenance:
